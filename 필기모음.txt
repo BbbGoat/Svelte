@@ -16,6 +16,7 @@ number 숫자
 >>> 규칙을 알면 코드를 이해하는게 쉬워진다!
 
 !!!! always const / sometimes let / never var !!!!
+______________________________________________________________________
 
 [boolean]
 불린 타입의 종류
@@ -27,5 +28,49 @@ null
 undefined
 -> 정의되지 않음 
 -> 메모리 안에는 존재하지만 비어있다!(할당값 없음)
+______________________________________________________________________
 
 [ array 배열 ]
+const arr = ["a", "b", "c", "d"];
+1. 시작 끝에 대괄호 사용
+2. 각각의 항목은 쉼표로 분리
+항목을 나열하여 필요한 요소(elements)를 선택해 불러온다!
+arr[0] -> 첫번째 요소 불러오기
+(컴퓨터는 0부터 세므로 순번은 0부터 시작한다!)
+push(); -> array 맨뒤에 항목 추가
+!!! array의 목적 : 하나의 variable 안에 데이터의 list를 가지는 것!
+______________________________________________________________________
+
+[ object 객체의 배열 ]
+1. 선언하는 방법
+const player = {
+    // 내부값 property
+    name: "nico",
+    point: 10,
+    fat: true,
+};
+2. 호출하는 방법
+    cosole.log(player.name);
+    cosole.log(player["name"]);
+    player.name
+    ->>> console은 object! 그 object 어딘가에 있는 log!
+3-1. 기존 객체에 property를 추가하는 방법
+    player.lastName = "hihi";
+    ->>> array와 다르게 object에서는 위와같은 간단한 선언으로 property를 추가할 수 있다!
+3-2. property를 업데이트 하는 방법
+    player.fat = false;
+    이렇게 변경 가능하다! const 상수지만 건드린거는 property 값이다!
+    player = false;
+    여기서 에러가 발생!! 직접적으로 const에 선언된 player 변수를 건드리는 것이므로!
+4. 이런것도 가능하다
+    player.points = player.points + 15;
+    산수가능!
+_________________________________________________
+
+property 값을 설명과 함께 넣을 수 있는 것이 object다!
+property값 설명이 어려운 array의 한계값을 보완해준다!
+코드가 직관적이고 변경이 쉽다!
+설명이 필요없으면 array 사용!
+_________________________________________________
+
+[ functions part 1 ]
