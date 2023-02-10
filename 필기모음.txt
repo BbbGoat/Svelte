@@ -53,6 +53,7 @@ const player = {
     1)변수형일경우
     cosole.log(player.name);
     player.name
+    cosole.log(player["name"]);
     2)문자형일경우
     cosole.log(player["name"]);
     ->>> console은 object! 그 object 어딘가에 있는 log!
