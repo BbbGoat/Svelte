@@ -50,9 +50,11 @@ const player = {
     fat: true,
 };
 2. 호출하는 방법
+    1)변수형일경우
     cosole.log(player.name);
-    cosole.log(player["name"]);
     player.name
+    2)문자형일경우
+    cosole.log(player["name"]);
     ->>> console은 object! 그 object 어딘가에 있는 log!
 3-1. 기존 객체에 property를 추가하는 방법
     player.lastName = "hihi";
@@ -99,7 +101,6 @@ const player = {
     }
 };
 
-console.log(player["name"]); // 아래처럼 줄여쓸 수 있다
 console.log(player.name);
 player.sayHello(argument); // 위와 같은 형식!
 
