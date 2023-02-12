@@ -48,3 +48,146 @@ ______________________________________________________________________
 
 [ 3-3. Events ]
 
+- javascript object다
+- 우리는 event를 listen 해야한다
+- 브라우저에서 발생하는 on... 동적인 것들
+
+예시) click event
+
+const title = document.querySelector("div.hello:first-child h1");
+
+function TitleClick(){
+    cosole.log("이게발생함!");
+}
+
+title.addEventListener("click", TitleClick);
+// title.addEventListener("이벤트", 함수명);
+
+>>> "click" 이란 이벤트가 발생하면 TitleClick이란 function이 동작하기를 원한다!
+>>> 주의!!! TitleClick 함수가 바로 실행되지 않도록 호출() 표현하지 않고 함수명만 넣는다!
+>>> addEventListener는 자바스크립트가 "click" 이벤트를 감지하면 TitleClick 함수를 자동으로 호출시키게 하는것!
+
+
+[ 3-5. More Events ]
+
+- 다양한 events
+- event 내부와 event를 컨트롤하는 다른 방법
+
+1) title.addEventListener("click", TitleClick);
+    -> addEventListener를 사용해 이벤트와 함수명을 넘겨주는 방법
+2) title.onClick = TitleClick;
+    -> on이벤트에 실행할 함수를 할당하는 방법
+
+>>> 이벤트를 지우거나 추가하는 경우를 위해 addEventListener를 더 선호하는 편!
+
+
+______________________________________________________________________
+
+
+[ 3-6. CSS in Javascript ]
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+fucntion colorChange() {
+    if (h1.style.color === "bule") {
+        h1.style.color = "tomato";
+    }
+    else {
+        h1.style.color = "blue";
+    }
+}
+
+h1.addEventListener("click", colorChange);
+
+
+///////////////////////////////////////////////////////////////
+//////////////// 이해하기 쉽게 코드를 바꿔보자!! ////////////////
+///////////////////////////////////////////////////////////////
+
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+fucntion colorChange() {
+    const currenColor = h1.style.color;
+    let newColor;
+    if (currenColor === "bule") {
+        newColor = "tomato";
+    }
+    else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
+}
+
+h1.addEventListener("click", colorChange);
+
+
+
+[ 3-7. CSS in Javascript part Two ]
+
+Javascript와 HTML, CSS의 각 용도에 맞는 사용
+
+/// CSS에서 해당 코드를 추가한다!
+.active {
+    color: tomato;
+}
+
+//// JS에서 CSS 클래스를 추가해준다!
+const h1 = document.querySelector("div.hello:first-child h1");
+
+fucntion colorChange() {
+    h1.className = "active";
+}
+
+h1.addEventListener("click", colorChange);
+
+>>> 클릭하면 클래스 이름이 active로 바뀐다!
+
+
+//// active 클래스 넣었다 뺐다 하기
+
+fucntion colorChange() {
+    cosnt clickedClass = "active" // 안전하게 상수(혹은변수)로 만들어주기
+    if (h1.className === clickedClass) {
+        h1.className = "";
+    }
+    else {
+        h1.className = clickedClass;
+    }
+}
+
+///////////////////////////////////////////////////////////////
+하지만 이 방식은 기존의 클래스도 날려버리기 때문에 ////////////////
+오류가 발생할 여지가 크다!! 좋은 방법이 아님 /////////////////////
+///////////////////////////////////////////////////////////////
+
+
+
+[ 3-8. CSS in Javascript part three ]
+
+classList를 사용하자!
+- classList.contain() 해당 이름의 class가 class에 포함되어있다 true / false
+- classList.add() class를 추가한다
+- classList.remove() class를 제거한다
+
+fucntion colorChange() {
+    cosnt clickedClass = "active" // 안전하게 상수(혹은변수)로 만들어주기
+    if (h1.classList.contain(clickedClass)) {
+        h1.classList.remove(clickedClass);
+    }
+    else {
+        h1.classList.add(clickedClass);
+    }
+}
+
+/////////////////////// 위 코드를 더 쉽게 만들자!! /////////////////////////
+
+fucntion colorChange() {
+    h1.classList.toggle("active"); // clicked을 한번만 사용하기 때문에 변수화 할 필요 없이 바로 써주면 됨
+}
+
+toggle은 해당 클래스명이 없으면 추가해주고 있으면 제거해준다!
+마치 버튼같은 형식의 내장함수다!
+
+______________________________________________________________________
+
