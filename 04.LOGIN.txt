@@ -1,2 +1,20 @@
 [ 4-0. Input Values ]
 
+input 태그 안에 입력하면 뜨는 값 = value
+
+
+[ 4-1. Form Submission]
+
+username 유효성 검토
+
+1) form의 기본 동작은 submit 이다!
+    submit은 기본적으로 엔터나 해당버튼 클릭시 값을 보내고 페이지를 새로고침한다
+    이 기본동작을 막아보자!
+
+preventDefault()
+    JS가 생성한 함수 호출시 브라우저가 실행하는 기본 동작을 막아주는 내장함수
+    -> 예를들면 submit, button 같은 value값 전달버튼 클릭시 페이지를 새로고침 하는걸 막는다
+
+
+2) a링크의 기본동작인 이동을 막아보자!
+
