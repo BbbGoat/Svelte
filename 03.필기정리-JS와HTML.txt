@@ -1,0 +1,50 @@
+[ 3.0 The Document Object ]
+
+- javascript는 html에 접근하고 읽을 수 있게 설정 되어 있다.
+- 브라우저가 html 정보가 아주 많이 들어있는 document라는 object를 전달해주는 것이다.
+- 우리는 html 코드를 JS 관점에서 보고 있는 것.
+- JS에서 html을 읽어올 뿐만 아니라, html을 변경할 수도 있다!
+
+호출하는법
+document.title
+document.body
+
+값 변경하는법
+document.title = "이렇게하면 title을 수정 가능하다!";
+
+______________________________________________________________________
+
+[ 3.1 HTML in Javascript ]
+
+주제 : JS에서 어떻게 html을 가져오고 수정하는가?
+
+document.getElementById("title");
+    - document에서 해당 id를 가진 태그를 가져온다
+    - getElementById 아이디로 요소를 가져오는 내장함수!
+
+______________________________________________________________________
+
+[ 3-2. Searching For Elements ]
+
+getElementsByClassName("name");
+    - class 이름으로 요소 가져오기
+    - 많은 elements를 가져와야 할 때 이것을 사용!
+getElementByTagName("h1");
+    - 태그로 요소 가져오기
+
+
+(( 추천방식!!! ))
+
+querySelector
+    - element를 css방식으로 검색할 수 있다!
+    - 단 하나의 값을 가져온다. 제일 첫번째 요소만 선택해서 가져옴
+    예) document.querySelector(".name h1");
+    >>> 클래스 name 안의 h1태그를 선택해서 가져옴!
+
+querySelectorAll
+    - 조건에 부합하는 모든 elements의 array를 반환해준다!
+
+______________________________________________________________________
+
+[ 3-3. Events ]
+
