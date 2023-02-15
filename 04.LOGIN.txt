@@ -47,3 +47,16 @@ localStorage.removeItem(key);
 [ 4-6. Loading Username ]
 
 로컬저장소에 저장된 유저 이름을 불러오는 방법
+
+
+[ clock ]
+
+setInterval(함수명, 시간);
+지정한 시간 후에 함수를 반복해서 불러온다!
+
+settimeout(함수명, 시간)
+지정한 시간 후에 함수를 불러온다!
+
+
+Date 내장함수
+- getHour() getMinutes() getSeconds() getDate() ... 많다!
