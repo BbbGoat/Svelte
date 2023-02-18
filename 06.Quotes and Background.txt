@@ -3,16 +3,28 @@
 Math() 내장함수
 
 random()
-- 랜덤한 숫자를 출력해준다 (소수점자리 포함)
+- 0부터 1사이 무작위의 랜덤한 숫자를 반환해준다 (소수점자리 포함)
 
 round()
 - 소수점 반올림
 
 ceil()
-- 소수점을 무조건 위로 올림
+- 소수점 올림
 
 floor()
-- 소수점을 무조건 아래로 내림
+- 소수점 내림
 
 
 [ Background ]
+
+createElement()
+- JS에서 html 요소를 생성한다
+- 태그를 만드는 내장함수
+- 예시) document.createElement("img")일 경우 html내에 img 태그를 생성
+
+appendChild()
+- body에 html을 추가하는 내장함수
+- 함수안의 경로에 정의한 값을 가장 뒤에서 기입함
+
+prepend()
+- 반대로 앞에서 기입
