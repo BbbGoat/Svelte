@@ -80,3 +80,20 @@ padEnd(자릿수, "뒤에 추가할 문자")
 
 "hello".padStart(20, "x")
 "xxxxxxxxxxxxxxxhello"
+
+
+[ Math() ]
+Math() 내장함수
+
+random()
+- 랜덤한 숫자를 출력해준다 (소수점자리 포함)
+
+round()
+- 소수점 반올림
+
+ceil()
+- 소수점을 무조건 위로 올림
+
+floor()
+- 소수점을 무조건 아래로 내림
+

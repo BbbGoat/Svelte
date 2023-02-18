@@ -1,3 +1,4 @@
+// 명언 다중객체 배열 array
 const quotes = [
 {
 quote: 'I never dreamed about success, I worked for it',
@@ -40,3 +41,14 @@ quote: 'If you really want to do something, you will find a way. If you do not, 
 author: 'Jim Rohn'
 },
 ];
+
+// 출력시킬 대상 수집
+const quote = document.querySelector("#quote span:first-child");
+const author = document.querySelector("#quote span:last-child");
+
+// 랜덤한 숫자를 만들어서 그 순번에 맞는 배열 할당
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+// 화면에 찍어보기
+quote.innerText = todaysQuote.quote;
+author.innerText = todaysQuote.author;
