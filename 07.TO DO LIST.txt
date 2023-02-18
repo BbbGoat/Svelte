@@ -1,0 +1,11 @@
+JSON.stringify()
+- 객체든 array든 string으로 바꿔주는 브라우저 기능
+- 값을 string으로 바꿀 때 사용한다
+
+JSON.parse()
+- string으로 단순 나열된 값들을 JS가 이해하는 객체로 만들어준다
+예시)
+JSON.parse("[1,2,3,4]")
+-> [1,2,3,4]
+단순한 value 값에서 순번을 가진 array로 변환됐다!
+

@@ -10,7 +10,8 @@ const toDos = [];
 function saveToDos() {
     // 로컬저장소에 해당 key, 값을 저장하는 의미인데
     // 순서상 이미 들어가있는 toDos 안의 array를 불러와 로컬저장소에 찍어주는것
-    localStorage.setItem("todos", toDos);
+    localStorage.setItem("todos", JSON.stringify(toDos));
+    // JSON.stringify() 객체나 배열을 string으로 변환해주는 브라우저 기능 
 }
 
 // 3. 버튼 클릭시 해당 버튼 지우기 함수
