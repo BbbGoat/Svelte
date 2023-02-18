@@ -63,3 +63,14 @@ function handleToDoSubmit(event) {
     
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+function sayHello(item) { // argument로 로컬저장소의 value값들 하나씩 전달
+    console.log("this is the turn of", item);
+}
+
+const savedToDos = localStorage.getItem("todos");
+
+if (savedToDos) {
+    const parsedToDos = JSON.parse(savedToDos);
+    parsedToDos.forEach(sayHello);
+}
