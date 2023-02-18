@@ -43,6 +43,32 @@ localStorage.removeItem(key);
 - 로컬 저장소에 해당 키에 해당되는 키, 값을 삭제함
 
 
+/**************************************************************************
+
+    localStorage는 string format밖에 지원을 안한다.
+    따라서 뭐든지 간에 다 string으로 전환하는데 JSON.stringify를 부러 쓰는 이유가 있다.
+
+    예시를 들어보자
+    const todo = ["hi", "hello"]
+    localStorage.setItem("todo",todo)
+    localStorage.getItem("todo")
+    >>> "hi,hello"
+    기존 리스트 형식 [a,b,c] 을 없애고 내용물 전체를 하나로 string화 시킨다!
+    이러면 배열이 아니므로 JS에서 이용할 수 없다
+
+    localStorage.setItem("todo",JSON.stringify(todo))
+    localStorage.getItem("todo")
+    >>> ["hi","hello"]
+    리스트를 살려서 값 하나하나를 string화 시킨다!
+    배열이므로 JS에서 활용 가능하다!
+
+    
+    결론적으로 JSON.stringify로 넘겨준 자료는 JSON.parse로 받아와서
+    데이터 손상없이 바로 배열로 사용할 수 있는 차이다.
+    만일 그냥 넘겨준 자료로 JSON.parse를 받아올시 오류가 난다.
+    
+
+**************************************************************************/
 
 [ 4-6. Loading Username ]
 
