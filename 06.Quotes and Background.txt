@@ -24,7 +24,7 @@ createElement()
 
 appendChild()
 - body에 html을 추가하는 내장함수
-- 함수안의 경로에 정의한 값을 가장 뒤에서 기입함
+- 함수안의 경로에 정의한 값을 가장 뒤에서 기입함!!
 
 prepend()
-- 반대로 앞에서 기입
+- appendchild와 반대개념. 앞에서 기입!!
