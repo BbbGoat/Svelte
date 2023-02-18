@@ -5,7 +5,7 @@ JSON.stringify()
 JSON.parse()
 - string으로 단순 나열된 값들을 JS가 이해하는 객체로 만들어준다
 예시)
-JSON.parse("[1,2,3,4]")
+JSON.parse(["1","2","3","4"])
 -> [1,2,3,4]
 단순한 value 값에서 순번을 가진 array로 변환됐다!
 
@@ -23,20 +23,28 @@ forEach() 메서드
     const todo = ["hi", "hello"]
     localStorage.setItem("todo",todo)
     localStorage.getItem("todo")
-    >>> "hi,hello"
-    기존 리스트 형식 [a,b,c] 을 없애고 내용물 전체를 하나로 string화 시킨다!
+    >>> "[hi, hello]"
+    localStorage는 string data type으로 저장시키기 때문에 배열 형식이 아니다.
     이러면 배열이 아니므로 JS에서 이용할 수 없다
 
     localStorage.setItem("todo",JSON.stringify(todo))
     localStorage.getItem("todo")
     >>> ["hi","hello"]
-    리스트를 살려서 값 하나하나를 string화 시킨다!
-    배열이므로 JS에서 활용 가능하다!
+    JSON.stringify()는 값 하나하나를 string화 시켜 저장시킨다!
+    이러면 배열이므로 JS에서 활용 가능하다!
 
     
-    결론적으로 JSON.stringify로 넘겨준 자료는 JSON.parse로 받아와서
+    결론적으로 JSON.stringify로 각 item별 string화 시켜 넘겨준 자료는 JSON.parse로 받아와서
     데이터 손상없이 바로 배열로 사용할 수 있는 차이다.
-    만일 그냥 넘겨준 자료로 JSON.parse를 받아올시 오류가 난다.
+    만일 그냥 넘겨준 자료로 JSON.parse를 받아올시 배열이 아니므로 오류가 난다.
     
 
 **************************************************************************/
+
+>>>> 정리!!!!!!!!!!!!!!
+
+localStorage에 array로 저장이 안되기 때문에
+JSON.stringify로 array처럼 생긴 string으로 저장한 후 다시 JSON.parse를 이용해
+array로 꺼내는 방법이다.
+
+array.forEach()는 받아온 array를 for 반복문 없이 item 하나씩 function에 넣을 수 있는 객체를 위한 메서드다!
