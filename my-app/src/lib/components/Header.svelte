@@ -37,7 +37,7 @@
 				<div class="col">
 					<a class="navbar-brand" href="/">
 						<img src={arrow} alt="table" width="30" height="24" class="d-inline-block align-text-top" />
-						숫자들어오ㅓㅁ
+						12
 					</a>
 				</div>
 			</Container>
