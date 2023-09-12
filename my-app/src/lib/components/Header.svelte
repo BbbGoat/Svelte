@@ -2,6 +2,7 @@
 <script>
 	import arrow from '$lib/images/chevron-down.png';
 	import { Container, Row, Col } from 'sveltestrap';
+	
 </script>
 
 <header>
@@ -15,7 +16,7 @@
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand" href="/">
+				<a class="navbar-brand" href="/" on:click={()=>{alert('Waiter Called')}}>
 					<img src="./src/lib/images/notifications_active.png" alt="waiter" width="30" height="24" class="d-inline-block align-text-top" />
 					Call Waiter
 				</a>
