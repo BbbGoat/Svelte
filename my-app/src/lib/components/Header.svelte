@@ -5,6 +5,15 @@
 	
 	const languages = [{name: 'English'}, {name: '한국어'}]
 	const tableNumber = '12'
+
+	function classHandler() {
+		let tg = document.querySelector('.sel-lang');
+		console.log('있음?',tg?.classList)
+		let chk = true;
+		if (chk == true) {
+			console.log('있음')
+		}
+	}
 </script>
 
 <header>
@@ -13,16 +22,16 @@
 			<Container fluid class="text-center g-0">
 			<div class="col">
 				<a class="navbar-brand" href="/" on:click={()=>{
-					
+					classHandler()
 				}}>
 					{languages[0].name}
 					<img src={arrow} alt="arrow" width="30" height="24" class="d-inline-block align-text-top" />
-					<div class="sel-lang">
+					<div class="sel-lang open">
 						<a href="#">
-							가나다라
+							{languages[0].name}
 						</a>
 						<a href="#">
-							가나다라
+							{languages[1].name}
 						</a>
 					</div>
 				</a>
@@ -48,7 +57,7 @@
 			<div class="col">
 				<a class="navbar-brand" href="/">
 					<img src="./src/lib/images/table.png" alt="table" width="30" height="24" class="d-inline-block align-text-top" />
-					12
+					{tableNumber}
 				</a>
 			</div>
 		</Container>
@@ -83,16 +92,30 @@
 	.col:nth-child(1) a {
 		position: relative;
 	}
-	.sel-lang {
+	.sel-lang.open {
 		display: block;
+	}
+	.sel-lang {
+		display: none;
 		position: absolute;
 		top: 100%;
 		left: 100%;
+		margin-left: 1rem;
 		transform: translateX(-100%);
 		background-color: #271919;
-
+		
+		width: 150px;
+		border: 1px solid #ccc;
+		z-index: 10;
+		padding: 0;
 	}
 	.sel-lang a {
 		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: 42px;
+	}
+	.sel-lang a:nth-child(2) {
+		border-top: 1px solid #ccc;
 	}
 </style>
