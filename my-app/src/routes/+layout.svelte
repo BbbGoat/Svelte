@@ -1,15 +1,18 @@
 <script>
-	import Header from './Header.svelte';
+	import Header from '../lib/components/Header.svelte';
 	import './styles.css';
 </script>
 
 <div class="app">
+	<!-- 헤더영역 -->
 	<Header />
 
+	<!-- 메인영역 -->
 	<main>
 		<slot />
 	</main>
 
+	<!-- 푸터영역 -->
 	<footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer>
