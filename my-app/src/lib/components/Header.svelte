@@ -3,6 +3,8 @@
 	import arrow from '$lib/images/chevron-down.png';
 	import { Container, Row, Col } from 'sveltestrap';
 	
+	const languages = [{name: 'English'}, {name: '한국어'}]
+	const tableNumber = '12'
 </script>
 
 <header>
@@ -10,9 +12,19 @@
 	<nav class="navbar">
 			<Container fluid class="text-center g-0">
 			<div class="col">
-				<a class="navbar-brand" href="/">
-					English
+				<a class="navbar-brand" href="/" on:click={()=>{
+					
+				}}>
+					{languages[0].name}
 					<img src={arrow} alt="arrow" width="30" height="24" class="d-inline-block align-text-top" />
+					<div class="sel-lang">
+						<a href="#">
+							가나다라
+						</a>
+						<a href="#">
+							가나다라
+						</a>
+					</div>
 				</a>
 			</div>
 			<div class="col">
@@ -67,5 +79,20 @@
 	.navbar {
 		background-color: #271919;
 		padding: 0;
+	}
+	.col:nth-child(1) a {
+		position: relative;
+	}
+	.sel-lang {
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 100%;
+		transform: translateX(-100%);
+		background-color: #271919;
+
+	}
+	.sel-lang a {
+		display: block;
 	}
 </style>
