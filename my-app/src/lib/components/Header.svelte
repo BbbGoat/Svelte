@@ -52,7 +52,7 @@
 	}
 	div {
 		box-sizing: border-box;
-		padding: 4px;
+		padding: 10px;
 		border-right: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 	}
