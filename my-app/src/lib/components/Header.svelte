@@ -1,12 +1,21 @@
 <!-- Header.svelte -->
 <script>
+// @ts-nocheck
+
 	import arrow from '$lib/images/chevron-down.png';
 	import { Container, Row, Col } from 'sveltestrap';
 	
 	const languages = [{name: 'English'}, {name: '한국어'}]
 	const tableNumber = '12'
 
+	// 클래스 추가
 	let current = 'close';
+
+	// 언어설정
+	let lang = languages[0].name;
+	function chgLang(pm) {
+		lang = pm;
+	}
 </script>
 
 <header>
@@ -14,41 +23,49 @@
 	<nav class="navbar">
 			<Container fluid class="text-center g-0">
 			<div class="col">
-				<a class="navbar-brand" href="/" on:click={()=>{
+				<a class="navbar-brand m-0" href="/" on:click={()=>{
 					current === 'close' ? current = 'open' : current = 'close'
 				}}>
-					{languages[0].name}
+					{lang}
 					<img src={arrow} alt="arrow" width="30" height="24" class="d-inline-block align-text-top" />
 					<div class="sel-lang" class:open={current === 'open'}>
-						<a href="#">
+
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<a href="#" on:click={(e)=>{
+							chgLang(languages[0].name)
+						}}>
 							{languages[0].name}
 						</a>
-						<a href="#">
+						<!-- svelte-ignore a11y-invalid-attribute -->
+						<a href="#" on:click={(e)=>{
+							chgLang(languages[1].name)
+						}}>
 							{languages[1].name}
 						</a>
+						
 					</div>
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand" href="/" on:click={()=>{alert('Waiter Called')}}>
+				<a class="navbar-brand m-0" href="/" on:click={()=>{alert('Waiter Called')}}>
 					<img src="./src/lib/images/notifications_active.png" alt="waiter" width="30" height="24" class="d-inline-block align-text-top" />
 					Call Waiter
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand" href="/">
+				<a class="navbar-brand m-0" href="/">
 					<img src="./src/lib/images/receipt.png" alt="bill" width="30" height="24" class="d-inline-block align-text-top" />
 					View Bill
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand" href="/">
+				<a class="navbar-brand m-0" href="/">
 					<img src="./src/lib/images/shopping_cart.png" alt="cart" width="30" height="24" class="d-inline-block align-text-top" />
 					My Cart
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand" href="/">
+				<a class="navbar-brand m-0" href="/">
 					<img src="./src/lib/images/table.png" alt="table" width="30" height="24" class="d-inline-block align-text-top" />
 					{tableNumber}
 				</a>
