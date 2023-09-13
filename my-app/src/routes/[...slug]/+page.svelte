@@ -2,6 +2,7 @@
 	// @ts-nocheck
 	import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+    import back_icon from '$lib/images/back_btn.png';
 	import { Container, Row, Col, Breadcrumb, BreadcrumbItem, Button } from 'sveltestrap';
 	import { categoryOrder, categories, products } from '../../data';    
 
@@ -38,7 +39,8 @@
 
 
     <Breadcrumb divider="・">
-        <button class="shadow-sm" on:click={()=>{goto("/", { replaceState: true});}}>아이콘
+        <button class="shadow-sm" on:click={()=>{goto("/", { replaceState: true});}}>
+            <img src={back_icon} alt="back" class="back-icon">
         </button>
         <BreadcrumbItem>
             <h3><a href="#home">{categories[param].name}</a></h3>
@@ -143,5 +145,16 @@
         background-color: #fff;
         margin-right: 30px;
         margin-left: 15px;
+        transition: .3s ease;
+    }
+    .back-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        transform: rotate(180deg);
+    }
+    button:hover {
+        border: 1px solid #c7c7c7;
+        background-color: #f1f1f1;
     }
 </style>
