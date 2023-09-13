@@ -1,6 +1,8 @@
 <script>
+// @ts-nocheck
+
 	import { Container, Row, Col } from "sveltestrap";
-	import { categoryOrder } from "../store";
+	import { categoryOrder, categories } from "../store";
 
 	let param = 'param'
 </script>
@@ -16,11 +18,11 @@
 		<Row cols={{ lg: 4, md: 2, sm: 2, xs:1 }}>
 			{#each categoryOrder as item, i (i) }
 			<Col class="position-relative">
-				<a class="wrap" href="/product/{item}">
+				<a class="wrap" href="/{item}">
 					<div class="img-box">
-						<img src="https://picsum.photos/300/200.webp" alt="ct-img" class="rounded-circle">
+						<img src={categories[item].picture} alt="ct-img" class="rounded-circle">
 					</div>
-					<h4>{item}</h4>
+					<h4>{categories[item].name}</h4>
 				</a>
 				<div class="bg">
 				</div>
