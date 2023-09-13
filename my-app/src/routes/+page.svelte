@@ -18,9 +18,9 @@
 		<Row cols={{ lg: 4, md: 2, sm: 2, xs:1 }}>
 			{#each categoryOrder as item, i (i) }
 			<Col class="position-relative">
-				<a class="wrap" href="/{item}">
+				<a class="wrap" href="/product/{item}">
 					<div class="img-box">
-						<img src={categories[item].picture} alt="ct-img" class="rounded-circle">
+						<img src={categories[item].picture} alt="ct-img" class="rounded-circle shadow">
 					</div>
 					<h4>{categories[item].name}</h4>
 				</a>

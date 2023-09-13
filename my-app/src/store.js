@@ -179,6 +179,7 @@ const categoryOrder = [
       description: '',
       id: 'appetizer06',
       name: 'Cheese Stick',
+      picture: 'https://picsum.photos/300/200.webp',
       price: 700,
     },
   
@@ -271,4 +272,4 @@ const categoryOrder = [
   }
   
 
-export {numStore, categoryOrder, categories}
+export {numStore, categoryOrder, categories, products}
