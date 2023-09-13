@@ -1,6 +1,6 @@
 <script>
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { Container, Row, Col } from "sveltestrap";
+	import { categoryOrder } from "../store";
 </script>
 
 <svelte:head>
@@ -9,20 +9,23 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+	<Container fluid>
+		<Row cols={{ lg: 4, md: 2, sm: 2, xs:1 }}>
+			{#each categoryOrder as item, i (i) }
+			<Col class="position-relative">
+				<a class="wrap" href="/product">
+					<div class="img-box">
+						<img src="https://picsum.photos/300/200.webp" alt="ct-img" class="rounded-circle">
+					</div>
+					<h4>{item}</h4>
+				</a>
+				<div class="bg">
+				</div>
+			</Col>
+			{/each}
+		</Row>
+	</Container>
 	
 </section>
 
@@ -34,24 +37,38 @@
 		align-items: center;
 		flex: 0.6;
 	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
+	img {
 		width: 100%;
 		height: 100%;
-		top: 0;
+		object-fit: cover;
+	}
+	.img-box {
 		display: block;
+		margin: 0 auto;
+		width: 150px;
+		height: 150px;
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 9px;
+		padding: 10px;
+		/* outline: 1px dotted red; */
+		border-radius: 10px;
+	}
+	.bg {
+		display: block;
+		position: relative;
+		top: -90%;
+		height: 90%;
+		width: 100%;
+		background-color: #f7f6f2;
+		border-radius: 10px;
+		z-index: -1;
+	}
+	a {
+		color: #000;
+		text-decoration: none;
 	}
 </style>

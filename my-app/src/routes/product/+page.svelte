@@ -4,5 +4,8 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+<script>
+	import {page} from "$app/stores";
+</script>
 
-<h1>프로덕트 페이지임</h1>
+<h4>프로덕트 페이지</h4>
