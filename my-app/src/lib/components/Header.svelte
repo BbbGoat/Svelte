@@ -6,14 +6,7 @@
 	const languages = [{name: 'English'}, {name: '한국어'}]
 	const tableNumber = '12'
 
-	function classHandler() {
-		let tg = document.querySelector('.sel-lang');
-		console.log('있음?',tg?.classList)
-		let chk = true;
-		if (chk == true) {
-			console.log('있음')
-		}
-	}
+	let current = 'close';
 </script>
 
 <header>
@@ -22,11 +15,11 @@
 			<Container fluid class="text-center g-0">
 			<div class="col">
 				<a class="navbar-brand" href="/" on:click={()=>{
-					classHandler()
+					current === 'close' ? current = 'open' : current = 'close'
 				}}>
 					{languages[0].name}
 					<img src={arrow} alt="arrow" width="30" height="24" class="d-inline-block align-text-top" />
-					<div class="sel-lang open">
+					<div class="sel-lang" class:open={current === 'open'}>
 						<a href="#">
 							{languages[0].name}
 						</a>
