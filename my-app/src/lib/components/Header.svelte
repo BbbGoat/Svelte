@@ -9,10 +9,8 @@
 	import table_icon from '$lib/images/table.png';
 
 	import { Container, Row, Col } from 'sveltestrap';
+	import { languages, tableNumber } from '../../data'
 	
-	const languages = [{name: 'English'}, {name: '한국어'}]
-	const tableNumber = '12'
-
 	// 클래스 추가
 	let current = 'close';
 

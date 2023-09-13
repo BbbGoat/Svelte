@@ -1,6 +1,6 @@
 const languages = [{name: 'English'}, {name: '한국어'}]
-const tableNumber = '12'
 
+const tableNumber = '12'
 
 const categoryOrder = [
     'mockCategory01',
@@ -271,4 +271,4 @@ const categoryOrder = [
   }
   
 
-export {categoryOrder, categories, products}
+export {categoryOrder, categories, products, languages, tableNumber}
