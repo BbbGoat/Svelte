@@ -2,13 +2,12 @@
 // @ts-nocheck
 
 	import { Container, Row, Col } from "sveltestrap";
-	import { categoryOrder, categories } from "../store";
+	import { categoryOrder, categories } from "../data";
 
-	let param = 'param'
 </script>
 
 <svelte:head>
-	<title>food app</title>
+	<title>Foodly | category</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
@@ -64,8 +63,8 @@
 	.bg {
 		display: block;
 		position: relative;
-		top: -90%;
-		height: 90%;
+		top: -80%;
+		height: 80%;
 		width: 100%;
 		background-color: #f7f6f2;
 		border-radius: 10px;

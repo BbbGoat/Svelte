@@ -1,6 +1,6 @@
 <!-- product/+page.svelte -->
 <svelte:head>
-	<title>food app</title>
+	<title>Foodly</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 

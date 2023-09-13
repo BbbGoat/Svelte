@@ -13,9 +13,9 @@
 	</main>
 
 	<!-- 푸터영역 -->
-	<footer>
+	<!-- <footer>
 		<p>푸터영역</p>
-	</footer>
+	</footer> -->
 </div>
 
 <style>
@@ -36,17 +36,6 @@
 		box-sizing: border-box;
 	}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
 
 	@media (min-width: 480px) {
 		footer {
