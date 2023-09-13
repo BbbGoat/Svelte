@@ -2,7 +2,12 @@
 <script>
 // @ts-nocheck
 
-	import arrow from '$lib/images/chevron-down.png';
+	import arrow_icon from '$lib/images/chevron-down.png';
+	import call_icon from '$lib/images/notifications_active.png';
+	import bill_icon from '$lib/images/receipt.png';
+	import cart_icon from '$lib/images/shopping_cart.png';
+	import table_icon from '$lib/images/table.png';
+
 	import { Container, Row, Col } from 'sveltestrap';
 	
 	const languages = [{name: 'English'}, {name: '한국어'}]
@@ -23,11 +28,12 @@
 	<nav class="navbar">
 			<Container fluid class="text-center g-0">
 			<div class="col">
-				<a class="navbar-brand m-0" href="/" on:click={()=>{
+				<!-- svelte-ignore a11y-invalid-attribute -->
+				<a class="navbar-brand m-0" href="#" on:click={()=>{
 					current === 'close' ? current = 'open' : current = 'close'
 				}}>
 					{lang}
-					<img src={arrow} alt="arrow" width="30" height="24" class="d-inline-block align-text-top" />
+					<img src={arrow_icon} alt="arrow" width="30" height="24" class="d-inline-block align-text-top" />
 					<div class="sel-lang" class:open={current === 'open'}>
 
 						<!-- svelte-ignore a11y-invalid-attribute -->
@@ -47,26 +53,30 @@
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand m-0" href="/" on:click={()=>{alert('Waiter Called')}}>
-					<img src="./src/lib/images/notifications_active.png" alt="waiter" width="30" height="24" class="d-inline-block align-text-top" />
+				<!-- svelte-ignore a11y-invalid-attribute -->
+				<a class="navbar-brand m-0" href="#" on:click={()=>{alert('Waiter Called')}}>
+					<img src={call_icon} alt="waiter" width="30" height="24" class="d-inline-block align-text-top" />
 					Call Waiter
 				</a>
 			</div>
+			<!-- svelte-ignore a11y-invalid-attribute -->
 			<div class="col">
-				<a class="navbar-brand m-0" href="/">
-					<img src="./src/lib/images/receipt.png" alt="bill" width="30" height="24" class="d-inline-block align-text-top" />
+				<a class="navbar-brand m-0" href="#">
+					<img src={bill_icon} alt="bill" width="30" height="24" class="d-inline-block align-text-top" />
 					View Bill
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand m-0" href="/">
-					<img src="./src/lib/images/shopping_cart.png" alt="cart" width="30" height="24" class="d-inline-block align-text-top" />
+				<!-- svelte-ignore a11y-invalid-attribute -->
+				<a class="navbar-brand m-0" href="#">
+					<img src={cart_icon} alt="cart" width="30" height="24" class="d-inline-block align-text-top" />
 					My Cart
 				</a>
 			</div>
 			<div class="col">
-				<a class="navbar-brand m-0" href="/">
-					<img src="./src/lib/images/table.png" alt="table" width="30" height="24" class="d-inline-block align-text-top" />
+				<!-- svelte-ignore a11y-invalid-attribute -->
+				<a class="navbar-brand m-0" href="#">
+					<img src={table_icon} alt="table" width="30" height="24" class="d-inline-block align-text-top" />
 					{tableNumber}
 				</a>
 			</div>

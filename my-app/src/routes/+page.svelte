@@ -1,6 +1,8 @@
 <script>
 	import { Container, Row, Col } from "sveltestrap";
 	import { categoryOrder } from "../store";
+
+	let param = 'param'
 </script>
 
 <svelte:head>
@@ -14,7 +16,7 @@
 		<Row cols={{ lg: 4, md: 2, sm: 2, xs:1 }}>
 			{#each categoryOrder as item, i (i) }
 			<Col class="position-relative">
-				<a class="wrap" href="/product">
+				<a class="wrap" href="/product/{item}">
 					<div class="img-box">
 						<img src="https://picsum.photos/300/200.webp" alt="ct-img" class="rounded-circle">
 					</div>

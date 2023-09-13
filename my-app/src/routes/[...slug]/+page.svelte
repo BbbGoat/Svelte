@@ -7,6 +7,7 @@
     
     console.log($page.params.slug);
 
+    // URL 파라미터 배열에 담기
     const slugArr = $page.params.slug.split('/');
     console.log(slugArr);
 </script>
