@@ -1,6 +1,7 @@
 {
 	"name": "my-app",
 	"version": "0.0.1",
+	"homepage": "https://bbbgoat.github.io/Svelte/my-app/",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
