@@ -1,7 +1,6 @@
 {
 	"name": "my-app",
 	"version": "0.0.1",
-	"homepage": "https://bbbgoat.github.io/Svelte/my-app/",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -22,7 +21,6 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"gh-pages": "^6.0.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.54.0",
