@@ -53,31 +53,23 @@
         <Container fluid>
         <Row cols={{ lg: 3, md: 2, sm: 1, xs: 1 }}>
             {#each prdArr as item, i (i)}
-            <Col class="position-relative">
+            <Col class="p-0 mb-3 position-relative">
+                <small>{i} : {item}</small>
                 <!-- svelte-ignore a11y-invalid-attribute -->
-                <p>PrdNum : {item}</p>
                 <a class="wrap" href="#">
                     <div class="img-box">
                         <img src={products[item].picture} alt="ct-img" />
                     </div>
                     <div class="txt-box text-center">
                         <h5>{products[item].name}</h5>
-                        <p>{products[item].description}</p>
+                        <p class="desc">{products[item].description}</p>
                         <span>${chgCents(products[item].price)}</span>
                     </div>
-                    <!-- <h4>{categories[item].name}</h4> -->
                 </a>
             </Col>
             {/each}
         </Row>
     </Container>
-
-    <!-- <h1>{categories[param].productOrder}</h1> -->
-
-    <!-- <h1>{categories[param].id}</h1> -->
-    <!-- <img src={categories[param].picture} alt="prd-img" /> -->
-
-
 	
 {/if}
 
@@ -100,12 +92,11 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+        border-radius: 10px;
 	}
 	.img-box {
 		display: block;
 		margin: 0 auto;
-		/* width: 150px;
-		height: 150px; */
 	}
 	.wrap {
 		display: flex;
@@ -113,6 +104,12 @@
 		align-items: center;
 		gap: 9px;
 		padding: 10px;
-		border-radius: 10px;
 	}
+    .desc {
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
 </style>
