@@ -14,6 +14,11 @@
     // each 반복시킬 상품 배열
     let prdArr = categories[param].productOrder;
 
+    // 정규식 이용한 2자리수 점 찍기
+    function chgCents(price) {
+        return price.toString().replace(/\B(?=(\d{2})+(?!\d))/g, '.');
+    }
+
 </script>
 
 <svelte:head>
@@ -26,7 +31,7 @@
 
 {:else if slugArr.length === 2}
 
-    <Container fluid>
+  
         <Breadcrumb divider="・" class="okok">
             <BreadcrumbItem>
                 <h3><a href="#home">{categories[param].name}</a></h3>
@@ -45,19 +50,24 @@
             </BreadcrumbItem>
         </Breadcrumb>
 
+        <Container fluid>
         <Row cols={{ lg: 3, md: 2, sm: 1, xs: 1 }}>
             {#each prdArr as item, i (i)}
-                <Col class="position-relative">
-                    <!-- svelte-ignore a11y-invalid-attribute -->
-                    <a class="wrap" href="#">
-                        <div class="img-box">
-                            <img src={products[item].picture} alt="ct-img" class="rounded-circle shadow" />
-                            <h3>{products[item].name}</h3>
-                        </div>
-                        <!-- <h4>{categories[item].name}</h4> -->
-                    </a>
-                    <div class="bg" />
-                </Col>
+            <Col class="position-relative">
+                <!-- svelte-ignore a11y-invalid-attribute -->
+                <p>PrdNum : {item}</p>
+                <a class="wrap" href="#">
+                    <div class="img-box">
+                        <img src={products[item].picture} alt="ct-img" />
+                    </div>
+                    <div class="txt-box text-center">
+                        <h5>{products[item].name}</h5>
+                        <p>{products[item].description}</p>
+                        <span>${chgCents(products[item].price)}</span>
+                    </div>
+                    <!-- <h4>{categories[item].name}</h4> -->
+                </a>
+            </Col>
             {/each}
         </Row>
     </Container>
@@ -86,16 +96,6 @@
 		color: #000;
 		text-decoration: none;
 	}
-	.bg {
-		display: block;
-		position: relative;
-		top: -90%;
-		height: 90%;
-		width: 100%;
-		background-color: #f7f6f2;
-		border-radius: 10px;
-		z-index: -1;
-	}
     img {
 		width: 100%;
 		height: 100%;
@@ -104,8 +104,8 @@
 	.img-box {
 		display: block;
 		margin: 0 auto;
-		width: 150px;
-		height: 150px;
+		/* width: 150px;
+		height: 150px; */
 	}
 	.wrap {
 		display: flex;
