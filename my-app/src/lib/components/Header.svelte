@@ -86,6 +86,7 @@
 <style>
 	a {
 		color: rgba(255, 255, 255, 0.4);
+		text-decoration: none;
 	}
 	.col:last-child a {
 		color: white;

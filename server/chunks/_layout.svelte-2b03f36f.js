@@ -7,7 +7,7 @@ const bill_icon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAAB
 const cart_icon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGbSURBVHgB7ZevVsMwFMa/7uyAmkINs6kpUFND8QA8JA7HY6yqihmqimEGMKthptzL7s6ykOT2X4aA3zk5XZMm+fLdNL0D/jrJ/kdVVTOjfp0kyQYnIJHJ53SZG/VbKg8k4hORGXjqz6hc4QSYIZjKxDdyZRcK9EtBrhZOAYYQOxx9siUB92aFKwRP2K0+Bmu74ocAUrgVETFYQhMgxHAhd73aTgGRXMhclYNAhz5dyHwHm1eAuPCM7pRUcl9jyAFmhe5koWM9KEA65mhPSWMEXdQcYAq0J9MeqCNggXastNUzw1CjfKJHclugvhts/WudB4dKu/lNSGPkCN4Q0OovcVh9HitB0RzYM7Mypiaw8EdfchM6iDiGJbrDLo59jUmoJ62aO19jl6C0ZUOLUV/HX0Nz4IIut1T4+kJlqW1GcY37sO38bGqnYSYDZaA7mZyZyMAaCxxi/i2GxjpHUwEysd1xDJ2pdc/7Z4IWAsqadTbvjroPNBVAcXvD8ceE84MUOimOE5lMxmoHb0Q+hEJxdPQZ8f8M2cT/BPkC8Lh/lNJR48gAAAAASUVORK5CYII=";
 const table_icon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAWCAYAAADTlvzyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD1SURBVHgB5ZXhDYIwEIWvxv8yQt3AEXQDnQBGYAPdQJmAsAEb6AY6Ak5gN6jvoMRqLIpAY/RLXlvgei9p7oqgJ2itI0wSmkABfUYihDi9jILZWvfDBZr5MrNNQ19mNuGjWaqHpzQVWMwx72l4ChTRdET+kDywYWE0NDkPggccq8R0pFvPJXVAB7ZQ3RYZFONI1bh0FaKAqd3g3PApVee+oDdBjqUxOkDK+sR5yudxw35J7QnMPukK8Fk032WoyLPhmarKSqgduVHmCnAVjUJVRdQSU4krXmvHpf2/RfObhndXEXWnOR9f4OZHHFMPmHw7aGO/vwKriq8bj1T3vgAAAABJRU5ErkJggg==";
 const css$1 = {
-  code: "a.svelte-7ce44p.svelte-7ce44p{color:rgba(255, 255, 255, 0.4)}.col.svelte-7ce44p:last-child a.svelte-7ce44p{color:white}a.svelte-7ce44p.svelte-7ce44p:hover{color:white}img.svelte-7ce44p.svelte-7ce44p{height:100%;object-fit:cover}div.svelte-7ce44p.svelte-7ce44p{box-sizing:border-box;padding:10px;border-right:1px solid #ccc;border-bottom:1px solid #ccc}.navbar.svelte-7ce44p.svelte-7ce44p{background-color:#271919;padding:0}.col.svelte-7ce44p:nth-child(1) a.svelte-7ce44p{position:relative}.sel-lang.open.svelte-7ce44p.svelte-7ce44p{display:block}.sel-lang.svelte-7ce44p.svelte-7ce44p{display:none;position:absolute;top:100%;left:100%;margin-left:1rem;transform:translateX(-100%);background-color:#271919;width:150px;border:1px solid #ccc;z-index:10;padding:0}.sel-lang.svelte-7ce44p a.svelte-7ce44p{display:block;width:100%;height:100%;line-height:42px}.sel-lang.svelte-7ce44p a.svelte-7ce44p:nth-child(2){border-top:1px solid #ccc}",
+  code: "a.svelte-vvwgi8.svelte-vvwgi8{color:rgba(255, 255, 255, 0.4);text-decoration:none}.col.svelte-vvwgi8:last-child a.svelte-vvwgi8{color:white}a.svelte-vvwgi8.svelte-vvwgi8:hover{color:white}img.svelte-vvwgi8.svelte-vvwgi8{height:100%;object-fit:cover}div.svelte-vvwgi8.svelte-vvwgi8{box-sizing:border-box;padding:10px;border-right:1px solid #ccc;border-bottom:1px solid #ccc}.navbar.svelte-vvwgi8.svelte-vvwgi8{background-color:#271919;padding:0}.col.svelte-vvwgi8:nth-child(1) a.svelte-vvwgi8{position:relative}.sel-lang.open.svelte-vvwgi8.svelte-vvwgi8{display:block}.sel-lang.svelte-vvwgi8.svelte-vvwgi8{display:none;position:absolute;top:100%;left:100%;margin-left:1rem;transform:translateX(-100%);background-color:#271919;width:150px;border:1px solid #ccc;z-index:10;padding:0}.sel-lang.svelte-vvwgi8 a.svelte-vvwgi8{display:block;width:100%;height:100%;line-height:42px}.sel-lang.svelte-vvwgi8 a.svelte-vvwgi8:nth-child(2){border-top:1px solid #ccc}",
   map: null
 };
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -16,29 +16,29 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 
-<header><nav class="navbar svelte-7ce44p">${validate_component(Container, "Container").$$render($$result, { fluid: true, class: "text-center g-0" }, {}, {
+<header><nav class="navbar svelte-vvwgi8">${validate_component(Container, "Container").$$render($$result, { fluid: true, class: "text-center g-0" }, {}, {
     default: () => {
-      return `<div class="col svelte-7ce44p">
-				<a class="navbar-brand m-0 svelte-7ce44p" href="#">${escape(lang)}
-					<img${add_attribute("src", arrow_icon, 0)} alt="arrow" width="30" height="24" class="d-inline-block align-text-top svelte-7ce44p">
-					<div class="${["sel-lang svelte-7ce44p", ""].join(" ").trim()}">
-						<a href="#" class="svelte-7ce44p">${escape(languages[0].name)}</a>
+      return `<div class="col svelte-vvwgi8">
+				<a class="navbar-brand m-0 svelte-vvwgi8" href="#">${escape(lang)}
+					<img${add_attribute("src", arrow_icon, 0)} alt="arrow" width="30" height="24" class="d-inline-block align-text-top svelte-vvwgi8">
+					<div class="${["sel-lang svelte-vvwgi8", ""].join(" ").trim()}">
+						<a href="#" class="svelte-vvwgi8">${escape(languages[0].name)}</a>
 						
-						<a href="#" class="svelte-7ce44p">${escape(languages[1].name)}</a></div></a></div>
-			<div class="col svelte-7ce44p">
-				<a class="navbar-brand m-0 svelte-7ce44p" href="#"><img${add_attribute("src", call_icon, 0)} alt="waiter" width="30" height="24" class="d-inline-block align-text-top svelte-7ce44p">
+						<a href="#" class="svelte-vvwgi8">${escape(languages[1].name)}</a></div></a></div>
+			<div class="col svelte-vvwgi8">
+				<a class="navbar-brand m-0 svelte-vvwgi8" href="#"><img${add_attribute("src", call_icon, 0)} alt="waiter" width="30" height="24" class="d-inline-block align-text-top svelte-vvwgi8">
 					Call Waiter
 				</a></div>
 			
-			<div class="col svelte-7ce44p"><a class="navbar-brand m-0 svelte-7ce44p" href="#"><img${add_attribute("src", bill_icon, 0)} alt="bill" width="30" height="24" class="d-inline-block align-text-top svelte-7ce44p">
+			<div class="col svelte-vvwgi8"><a class="navbar-brand m-0 svelte-vvwgi8" href="#"><img${add_attribute("src", bill_icon, 0)} alt="bill" width="30" height="24" class="d-inline-block align-text-top svelte-vvwgi8">
 					View Bill
 				</a></div>
-			<div class="col svelte-7ce44p">
-				<a class="navbar-brand m-0 svelte-7ce44p" href="#"><img${add_attribute("src", cart_icon, 0)} alt="cart" width="30" height="24" class="d-inline-block align-text-top svelte-7ce44p">
+			<div class="col svelte-vvwgi8">
+				<a class="navbar-brand m-0 svelte-vvwgi8" href="#"><img${add_attribute("src", cart_icon, 0)} alt="cart" width="30" height="24" class="d-inline-block align-text-top svelte-vvwgi8">
 					My Cart
 				</a></div>
-			<div class="col svelte-7ce44p">
-				<a class="navbar-brand m-0 svelte-7ce44p" href="#"><img${add_attribute("src", table_icon, 0)} alt="table" width="30" height="24" class="d-inline-block align-text-top svelte-7ce44p">
+			<div class="col svelte-vvwgi8">
+				<a class="navbar-brand m-0 svelte-vvwgi8" href="#"><img${add_attribute("src", table_icon, 0)} alt="table" width="30" height="24" class="d-inline-block align-text-top svelte-vvwgi8">
 					${escape(tableNumber)}</a></div>`;
     }
   })}</nav>
@@ -63,4 +63,4 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 
 export { Layout as default };
-//# sourceMappingURL=_layout.svelte-772ddf50.js.map
+//# sourceMappingURL=_layout.svelte-2b03f36f.js.map
